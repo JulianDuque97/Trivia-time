@@ -1,5 +1,6 @@
 import sys
 import db
+from db import Random_question
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from PyQt5 import QtGui
@@ -14,9 +15,26 @@ class Start(QMainWindow):
         self.user_name_line_edit.editingFinished.connect(self.Name)    
                                 
     def Name(self):
-        self.name = self.user_name_line_edit.text()        
+        self.name = self.user_name_line_edit.text() 
+         
+        # mydb = db.mydb
+        # cursor = mydb.cursor()
+        # get_user = '''SELECT player_name, player_score 
+        #             FROM q_a.players WHERE player_name = "'''+str(self.name)+'''";'''
+        # cursor.execute(get_user)
+        # record = cursor.fetchall()
+        # if not record:
+        #     print("User is not in the db")
+        #     add_user = '''INSERT INTO q_a.players (player_name, player_score) VALUES (%s, %s)'''
+        #     user_name = [("'"+self.name+"'",'0')]
+        #     cursor.executemany(add_user, user_name)
+        #     record = cursor.fetchall()
+        #     print("\nUser added")
+            
+        # print(record)     
+              
         return self.name  
-       
+          
     def Next(self):
         self.hide()
         next_window = Instructions(self)
@@ -47,8 +65,27 @@ class Questions(QMainWindow):
         super(Questions, self).__init__(parent)
         loadUi('questions.ui', self)
         self.back_button.clicked.connect(self.Back)
-        # self.question = db.question
-        self.label.setText(db.question)
+        print(Random_question.grab_answer)
+        self.radioButton.setText("hello")
+        
+        self.difficulty = 1
+
+        random_question = Random_question.get_random_question(self,self.difficulty)
+        question = Random_question.get_question(self)
+        level = int(Random_question.get_level(self))
+        self.label.setText(question)
+        
+        if level == 1:
+            self.level_label.setText('easy')
+        elif level == 2:
+            self.level_label.setText('Normal')
+        elif level == 3:
+            self.level_label.setText('Moderate')
+        elif level == 4:
+            self.level_label.setText('Difficult')                    
+        else:
+            self.level_label.setText('Extreme')            
+        
         
     def Questions_db(self):
         pass
