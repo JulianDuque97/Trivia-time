@@ -46,16 +46,14 @@
     </ul>
   </li>
 </ul>
-  
-  
-
-<h2>Librerias que son necesarias descargar</h2>
+ 
+<h2>Librerias que son necesarias descargar utilizando pip</h2>
 <ul>
   <li>PyQt5, esta libreria permite conectar con la interfaz</li>
   <li>MySQL-python, esta libreria permite conectar con la base de datos</li>
 </ul>
 
-<h2>Librerias adicionales que no son necesarias descargar</h2>
+<h2>Librerias adicionales que no son necesarias descargar utilizando pip</h2>
 <ul>
   <li>db, esta libreria hace llamado al programa creado para hacer los llamados a la base de datos</li>
   <li>logos_rc, esta libreria manda a traer las imagenes usadas en la interfaz</li>
