@@ -65,7 +65,7 @@ class Questions(QMainWindow):
         super(Questions, self).__init__(parent)
         loadUi('questions.ui', self)
         self.back_button.clicked.connect(self.Back)
-        print(Random_question.grab_answer)
+        print(str(Random_question.grab_answer))
         self.radioButton.setText("hello")
         
         self.difficulty = 1
