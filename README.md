@@ -27,14 +27,27 @@
   <li>Archivo main.py, como su nombre lo indica es el archivo principal de la actividad</li>
   <li>Archivo logos.py, es el mismo logos.qrc pero convertido a python para asi poder importarlo</li>
   <li>Archivo db.py, es donde se hace la conexion con la base de datos y se hacen los queries para pedirle a la bd.</li>
-</ul>
+</ul> 
 
 <h2>Explicacion de las carpetas</h2>
 <ul>
   <li>Imagenes, en esta carpeta podra encontrar todas las imagenes que fueron utilizadas en la interfaz</li>
   <li>db, Adentro podran encontrar un export de las tablas utilizadas en la base de datos</li>
-  <li>img_interfaz, En esta carpeta podran encontrar imagenes del diseño de la interfaz enumeradas segun el ordern natural del juego.</li>
+  <li>img_interfaz, En esta carpeta podran encontrar imagenes del diseño de la interfaz enumeradas segun el ordern natural del juego. 
+    <ul>
+      <li>Start_1: Se inicia la aplicacion, el juego pide un nombre para comenzar.</li>
+      <li>Instructions_2: Muestra en pantalla las intrucciones del juego y saluda al usuario.</li>
+      <li>Instructions_2: Muestra en pantalla las intrucciones del juego y saluda al usuario.</li>
+      <li>Question_3.0: Muestra en pantalla la primera pregunta, ahi podemos ver de que nivel es y las 4 posibles respuestas.</li>
+      <li>Point_3.1: Si el jugador contesta de manera correcta el juego lo felicita y le da una estrella que es el equivalente a un punto en el juego.</li>
+      <li>Lost_3.2: Si el jugador contesta de manera equivocada el juego le dice que a perdido y que es necesario volver a comenzar desde cero.</li>
+      <li>Exit_4: Si el jugador decide terminar de manera voluntaria el juego le muestra una alerta al respecto.</li>
+      <li>Winner_5: Si el jugador contesta de manera exitosa las 5 rondas el juego le muestra que a ganado.</li>
+    </ul>
+  </li>
 </ul>
+  
+  
 
 <h2>Librerias que son necesarias descargar</h2>
 <ul>
